@@ -47,4 +47,6 @@ $app->get('/logout', [AuthController::class, 'logout']);
 
 $app->get('/dashboard', [AuthController::class, 'dashboard']);
 
+$app->addErrorMiddleware(true, true, true);
+
 $app->run();

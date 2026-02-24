@@ -1,0 +1,14 @@
+# Composer dependencies — install locally with `composer install`
+/vendor/
+
+# Composer lock is intentionally kept in version control
+# Remove the line below only if you want to exclude it too
+# composer.lock
+
+# Environment / IDE files
+.env
+.env.local
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
