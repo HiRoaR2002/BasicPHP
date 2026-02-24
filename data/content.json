@@ -1,0 +1,28 @@
+{
+    "site_name": "My PHP App",
+    "hero": {
+        "title": "Welcome to My PHP App",
+        "subtitle": "A clean Slim 4 application with Mustache templates and session auth.",
+        "cta_text": "Get Started"
+    },
+    "features": [
+        {
+            "icon": "",
+            "title": "Fast & Lightweight",
+            "description": "Built on Slim 4, one of the fastest PHP micro-frameworks available."
+        },
+        {
+            "icon": "",
+            "title": "Session Authentication",
+            "description": "Secure login flow with session management and easy logout."
+        },
+        {
+            "icon": "",
+            "title": "Mustache Templates",
+            "description": "Clean separation of logic and presentation using Mustache templating."
+        }
+    ],
+    "footer": {
+        "text": "© 2026 My PHP App. All rights reserved."
+    }
+}

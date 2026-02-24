@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page_title}} | {{site_name}}</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #fff;
+            color: #111;
+            min-height: 100vh;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        nav .brand {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #111;
+            text-decoration: none;
+        }
+
+        nav .nav-links { display: flex; align-items: center; gap: 1.5rem; }
+
+        nav .nav-links a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.15s;
+        }
+        nav .nav-links a:hover { color: #111; }
+
+        nav .nav-links .btn-nav {
+            background: #111;
+            color: #fff !important;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        nav .nav-links .btn-nav:hover { background: #333; }
+
+        .flash {
+            padding: 0.7rem 1.2rem;
+            margin: 1.2rem auto;
+            max-width: 480px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            text-align: center;
+        }
+        .flash.success { background: #f0faf0; border: 1px solid #b7e4b7; color: #276749; }
+        .flash.error   { background: #fff5f5; border: 1px solid #f5c6c6; color: #9b1c1c; }
+
+        main { padding: 2rem; }
+
+        footer {
+            border-top: 1px solid #e5e5e5;
+            margin-top: 5rem;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #999;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="brand" href="/">{{site_name}}</a>
+    <div class="nav-links">
+        <a href="/">Home</a>
+        {{#is_logged_in}}
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout" class="btn-nav">Logout</a>
+        {{/is_logged_in}}
+        {{^is_logged_in}}
+        <a href="/login" class="btn-nav">Login</a>
+        {{/is_logged_in}}
+    </div>
+</nav>
+
+{{#flash_success}}<div class="flash success">{{flash_success}}</div>{{/flash_success}}
+{{#flash_error}}<div class="flash error">{{flash_error}}</div>{{/flash_error}}
+
+<main>
+    {{{body}}}
+</main>
+
+<footer>{{footer_text}}</footer>
+
+</body>
+</html>

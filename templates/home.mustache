@@ -1,0 +1,24 @@
+<section style="max-width: 640px; margin: 6rem auto 4rem; padding: 0 1.5rem;">
+    <h1 style="font-size: 2.2rem; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 1rem; line-height: 1.2;">
+        {{hero_title}}
+    </h1>
+    <p style="color: #555; font-size: 1rem; margin-bottom: 2rem;">
+        {{hero_subtitle}}
+    </p>
+    <a href="/login" style="display: inline-block; background: #111; color: #fff; text-decoration: none;
+       padding: 0.6rem 1.4rem; border-radius: 4px; font-size: 0.9rem; font-weight: 500;">
+        {{hero_cta}}
+    </a>
+</section>
+
+<section style="max-width: 900px; margin: 0 auto 5rem; padding: 0 1.5rem;
+                display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px;
+                border: 1px solid #e5e5e5; border-radius: 6px; overflow: hidden;">
+    {{#features}}
+    <div style="padding: 1.8rem; border-right: 1px solid #e5e5e5;">
+        <div style="font-size: 1.4rem; margin-bottom: 0.8rem;">{{icon}}</div>
+        <h3 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.4rem;">{{title}}</h3>
+        <p style="color: #666; font-size: 0.875rem; line-height: 1.6;">{{description}}</p>
+    </div>
+    {{/features}}
+</section>

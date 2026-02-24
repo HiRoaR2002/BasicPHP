@@ -1,0 +1,52 @@
+<div style="max-width: 380px; margin: 5rem auto; padding: 0 1.5rem;">
+
+    <h2 style="font-size: 1.4rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 0.3rem;">
+        Sign in
+    </h2>
+    <p style="color: #777; font-size: 0.875rem; margin-bottom: 2rem;">
+        Enter your ID to continue. Password is optional.
+    </p>
+
+    <form method="POST" action="/login">
+
+        <div style="margin-bottom: 1.2rem;">
+            <label for="login_id" style="display: block; font-size: 0.825rem; font-weight: 500;
+                   color: #333; margin-bottom: 0.4rem;">
+                User ID <span style="color: #c00;">*</span>
+            </label>
+            <input type="text" name="id" id="login_id" required
+                   placeholder="e.g. alice"
+                   value="{{old_id}}"
+                   style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid #d0d0d0;
+                          border-radius: 4px; font-size: 0.9rem; color: #111; outline: none;
+                          transition: border-color 0.15s;"
+                   onfocus="this.style.borderColor='#111'"
+                   onblur="this.style.borderColor='#d0d0d0'">
+        </div>
+
+        <div style="margin-bottom: 1.8rem;">
+            <label for="login_password" style="display: block; font-size: 0.825rem; font-weight: 500;
+                   color: #333; margin-bottom: 0.4rem;">
+                Password
+                <span style="color: #999; font-weight: 400;">(optional)</span>
+            </label>
+            <input type="password" name="password" id="login_password"
+                   placeholder="Leave blank if none"
+                   style="width: 100%; padding: 0.55rem 0.75rem; border: 1px solid #d0d0d0;
+                          border-radius: 4px; font-size: 0.9rem; color: #111; outline: none;
+                          transition: border-color 0.15s;"
+                   onfocus="this.style.borderColor='#111'"
+                   onblur="this.style.borderColor='#d0d0d0'">
+        </div>
+
+        <button type="submit" id="login_submit"
+                style="width: 100%; padding: 0.65rem; background: #111; color: #fff;
+                       border: none; border-radius: 4px; font-size: 0.9rem; font-weight: 500;
+                       cursor: pointer; transition: background 0.15s;"
+                onmouseover="this.style.background='#333'"
+                onmouseout="this.style.background='#111'">
+            Sign in
+        </button>
+
+    </form>
+</div>
